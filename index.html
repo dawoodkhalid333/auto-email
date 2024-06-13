@@ -24,15 +24,26 @@
       document
         .getElementById("startButton")
         .addEventListener("click", function () {
-          Email.send({
-            Host: "smtp.elasticemail.com",
-            Username: "dawoodkhalid33@gmail.com",
-            Password: "98251F00F03652B17C316FDF39B8CEB96A53",
-            To: "dawoodkhalid33@gmail.com",
-            From: "dawoodkhalid33@gmail.com",
-            Subject: "Appointment Open",
-            Body: `Open ho gyi`,
-          })
+          Email.send(
+            {
+              Host: "smtp.elasticemail.com",
+              Username: "dawoodkhalid33@gmail.com",
+              Password: "98251F00F03652B17C316FDF39B8CEB96A53",
+              To: "dawoodkhalid33@gmail.com",
+              From: "dawoodkhalid33@gmail.com",
+              Subject: "Appointment Open",
+              Body: `Open ho gyi`,
+            },
+            {
+              Host: "smtp.elasticemail.com",
+              Username: "haider.ghumman44@gmail.com",
+              Password: "29F4F9330BB0AC91A34525552F6C263C80B8",
+              To: "haider.ghumman44@gmail.com",
+              From: "haider.ghumman44@gmail.com",
+              Subject: "Appointment Open",
+              Body: `Open ho gyi`,
+            }
+          )
             .then((message) => {
               console.log("Email sent successfully:", message);
               window.close();
