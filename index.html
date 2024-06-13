@@ -3,26 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Send Email on Button Click</title>
+    <title>Send Email on Page Load</title>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-  </head>
-  <body>
-    <button id="startButton">Start</button>
-
     <script>
-      document
-        .getElementById("startButton")
-        .addEventListener("click", function () {
-          Email.send({
-            Host: "smtp.elasticemail.com",
-            Username: "dovob82715@lapeds.com",
-            Password: "7E5AEB72A65D3D39D2DB6A491662D5E15E19",
-            To: "dovob82715@lapeds.com",
-            From: "dovob82715@lapeds.com",
-            Subject: "Appointment Open",
-            Body: `Open ho gyi`,
-          }).then((message) => window.window.close());
-        });
+      window.onload = function () {
+        Email.send({
+          Host: "smtp.elasticemail.com",
+          Username: "dovob82715@lapeds.com",
+          Password: "7E5AEB72A65D3D39D2DB6A491662D5E15E19",
+          To: "dovob82715@lapeds.com",
+          From: "dovob82715@lapeds.com",
+          Subject: "Appointment Open",
+          Body: `Open ho gyi`,
+        }).then((message) => window.close());
+      };
     </script>
-  </body>
+  </head>
+  <body></body>
 </html>
