@@ -10,6 +10,12 @@
     <button id="startButton">Start</button>
     <script>
       window.onload = function () {
+        console.log("Page loaded, attempting to reload...");
+        window.location.reload();
+      };
+    </script>
+    <script>
+      window.onload = function () {
         console.log("Page loaded, attempting to send email...");
         document.getElementById("startButton").click();
       };
